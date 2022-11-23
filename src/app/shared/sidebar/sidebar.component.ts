@@ -9,8 +9,12 @@ export class SidebarComponent {
 
   constructor(private gifsService: GifsService) { }
 
-  get historial(): String[] {
-    return this.gifsService.historial;
+  get history(): string[] {
+    return this.gifsService.history;
+  }
+
+  buscarGift(query: string): void {
+    this.gifsService.buscarGifs(query);
   }
 
 }
